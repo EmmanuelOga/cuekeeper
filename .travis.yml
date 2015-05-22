@@ -1,4 +1,6 @@
 language: c
+install: mkdir ~/bin
+script: ln -s /usr/bin/gcc-4.9 $(opam config var prefix)/bin/gcc
 script: gcc --version
 script: gcc-4.9 --version
 script: opam init -a
