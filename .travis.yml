@@ -1,10 +1,10 @@
 language: c
-install: mkdir ~/bin
-script: ln -s /usr/bin/gcc-4.9 $(opam config var prefix)/bin/gcc
-script: gcc --version
-script: gcc-4.9 --version
-script: opam init -a
-script: opam install mirage-entropy-xen
+script:
+ - ln -s /usr/bin/gcc-4.9 $(opam config var prefix)/bin/gcc
+ - gcc --version
+ - gcc-4.9 --version
+ - opam init -a
+ - opam install mirage-entropy-xen
 sudo: false
 addons:
   apt:
