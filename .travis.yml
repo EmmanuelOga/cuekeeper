@@ -1,6 +1,8 @@
 language: c
 script: gcc --version
 script: gcc-4.9 --version
+script: opam init -a
+script: opam install mirage-entropy-xen
 sudo: false
 addons:
   apt:
@@ -8,5 +10,6 @@ addons:
     - ubuntu-toolchain-r-test
     packages:
     - gcc-4.9
+    - opam
 env:
   - FORK_USER=talex5 FORK_BRANCH=containers OPAMYES=true OCAML_VERSION=4.01 TESTS=true PINS="bin_prot:https://github.com/talex5/bin_prot.git#js_of_ocaml irmin:https://github.com/talex5/irmin.git#hack-slice sexplib:https://github.com/talex5/sexplib.git#js_of_ocaml mirage conduit dolog:https://github.com/UnixJunkie/dolog.git#no_unix" POST_INSTALL_HOOK="bash -eux .travis-post-install.sh"
