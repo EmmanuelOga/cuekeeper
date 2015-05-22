@@ -6,3 +6,5 @@ ocamlfind list
 opam list
 make clean
 make server MIRAGE_FLAGS='--no-depext'
+make clean
+make server MIRAGE_FLAGS='--no-depext --xen'

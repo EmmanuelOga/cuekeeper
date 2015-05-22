@@ -62,3 +62,4 @@ server: client server/conf/tls/server.pem
 
 clean:
 	ocamlbuild -clean
+	rm -rf server/_build

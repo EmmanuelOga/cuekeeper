@@ -93,6 +93,7 @@ Deploying as a Xen VM
 
 In fact, the server is a [Mirage unikernel][mirage] and can also be compiled and booted as a Xen virtual machine:
 
+    opam pin add dolog 'https://github.com/UnixJunkie/dolog.git#no_unix'
     make server MIRAGE_FLAGS="--xen"
     cd server
     xl create -c cuekeeper.xl
